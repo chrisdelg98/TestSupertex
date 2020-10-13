@@ -2,7 +2,6 @@
     class Users {
         private $db;
         private $usuarios;
-        private $roles;
     
         public function __construct()
         {
