@@ -106,7 +106,7 @@
 
         public function editUsuario($id,$nombre,$telefono,$correo,$usuario,$password)
         {
-            $query=mysqli_query($this->db, "UPDATE usuarios SET nombre_usuario = '$nombre',telefono_usuario='$telefono',correo_usuario='$correo',usuario='$usuario',contrasena='$password' WHERE id_usuario = '$id' ;");
+            $query=mysqli_query($this->db, "UPDATE usuarios SET nombre_usuario = '$nombre',telefono_usuario='$telefono',correo_usuario='$correo',usuario='$usuario',contrasena=SHA1('$password') WHERE id_usuario = '$id' ;");
 
             if($query== FALSE)
             {
